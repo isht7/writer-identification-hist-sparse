@@ -8,11 +8,11 @@ for i=start_folder : end_folder
     i
     x1=num2str(i);
     %folder=strcat(pwd,'\Data\',x1); %     #change#
-    folder = strcat('D:\Dropbox\sem7\BTP\data\IAM database by writer\original\',x1);
+    folder = strcat('/home/ravikiran/isht/original/',x1); % point to the folder "original" in the dataset here.
     %     #change#
     for j = start_document:end_document
         x2=num2str(j);
-        file=strcat(folder,'\',x2,'.xml');
+        file=fullfile(folder,strcat(x2,'.xml')); 
 %% reading strokes from training data        
         [strokes,count] = DocRead(file);
         ind(i-start_folder + 1,j - start_document + 1) = count;

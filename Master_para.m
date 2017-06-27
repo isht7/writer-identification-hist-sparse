@@ -51,7 +51,7 @@ L = 5;
 [Dict1,alpha1,alpha2] = Dlearn_tf_idf(K,L,lambda,iter,mode,modeParam,features1(:,:),features11(:,:),ind1,ind2); 
 alpha_tr=[alpha1]; alpha_te=[alpha2];
 [AccuracyK, dist,results, results_f] = KNN(7,end_folder-start_folder+1,alpha_tr,alpha_te,end_training_document,start_training_document,end_testing_document,start_testing_document);
-ks=10;
+ks=0.1;
 bc=1;
 
 disp('SVM classification');
