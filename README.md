@@ -22,12 +22,12 @@ If you use this work, please cite the paper:
 
 2. Modify the root directory in `DataRead.m` to point to the dataset directory.
 
-3. `Master10x.m` and `Master7x.m` are the 2 main scripts which are to be executed to get results. `Master7x.m` is for paragraph level writer identification, and `Master10x.m` is for text-line level writer identification (as dicussed in the paper). All other .m files are supporting functions. Brief descriptions of relevant supporting files is given below:
+3. `Master_textline.m` and `Master_para.m` are the 2 main scripts which are to be executed to get results. `Master_para.m` is for paragraph level writer identification, and `Master_textline.m` is for text-line level writer identification (as dicussed in the paper). All other .m files are supporting functions. Brief descriptions of relevant supporting files is given below:
     * `KNN.m` is a function implementing K nearest neighbour classifier for paragraph level code. `svm4_top.m` gives the top1, top3, top5 accuracy for paragraph level code. 
 `svm4line.m` gives the top1, top3, top4 ... , top20 accuracy for text-line level code. You can choose to use rbf / linear kernel by modifying this function. `findWriter.m` is used by the function `svm4line`.
-    * `DataRead.m` uses the function `DocRead.m`, `xml2struct.m` and `Sstrokes2_swap.m` / `Sstrokes2_without_sampling.m`(depending on whether you want to sample the sub-strokes to 32 points). Sampling to 32 points gives better results. 
+    * `DataRead.m` uses the function `DocRead.m`, `xml2struct.m` and `strokesGen_sampling.m` / `strokesGen_Nosampling.m`(depending on whether you want to sample the sub-strokes to 32 points). Sampling to 32 points gives better results. 
     * `Dlearn_tf_idf.m` uses the sparse toolbox to calculate the sparse dictionary and the tf, idf vectors.
-    * `feat_HOGS_noSamx.m` is used to calculate the histogram based features. `feat2.m` can be used to calculate spectral features for comparison.
+    * `feat_HOGS.m` is used to calculate the histogram based features. `feat2.m` can be used to calculate spectral features for comparison.
 
 4. `start_spams.m` and the folder "build" are files used by the sparse toolbox. Please compile the toolbox using gcc on your pc and place the folder named "build" generated after compilation in the same directory as other .m files. (Link to toolbox: http://spams-devel.gforge.inria.fr/). If you use this toolbox, please consider citing them, references are given on the link provided.
 
