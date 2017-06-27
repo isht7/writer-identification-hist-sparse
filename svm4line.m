@@ -13,8 +13,8 @@ tempx = 1;
 for i = 1 : numWriters
     Y = -ones(no_Tr_lines,1);
     Y(tempx : tempx + W1_4index(i)-1) = 1;
-     model{i} = fitcsvm(alpha_tr',Y,'KernelScale',ks,'BoxConstraint',bc);
-%        model{i} = fitcsvm(alpha_tr',Y,'KernelScale',ks,'BoxConstraint',bc,'KernelFunction','rbf');
+%     model{i} = fitcsvm(alpha_tr',Y,'KernelScale',ks,'BoxConstraint',bc);
+        model{i} = fitcsvm(alpha_tr',Y,'KernelScale',ks,'BoxConstraint',bc,'KernelFunction','rbf');
       tempx = tempx + W1_4index(i);
 
 end

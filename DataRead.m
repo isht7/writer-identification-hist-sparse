@@ -17,7 +17,7 @@ for i=start_folder : end_folder
         [strokes,count] = DocRead(file);
         ind(i-start_folder + 1,j - start_document + 1) = count;
        TStrokes{i-start_folder + 1,j - start_document + 1} = strokes;
-       strokes = Sstrokes2_swap_without_sampling(strokes,count);
+       strokes = strokesGen_Nosampling(strokes,count);
          TStrokes_processed{i-start_folder + 1,j - start_document + 1} = strokes;
          
         

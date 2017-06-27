@@ -85,7 +85,7 @@ end
 features1=[];
 for i =start_folder-1:end_folder-1
     for j=1:4
-    X=feat_HOGS_noSamx(TStrokes_processed{i,train_writers(j)},no_of_bins);       %HOG,train
+    X=feat_HOGS(TStrokes_processed{i,train_writers(j)},no_of_bins);       %HOG,train
     features1 = [features1,X];
     end
 end
@@ -94,14 +94,14 @@ end
 features11=[];
 for i =start_folder-1:end_folder-1
     for j=1:4
-    X=feat_HOGS_noSamx(TStrokes_processed{i,test_writers(j)},no_of_bins);       %HOG,test
+    X=feat_HOGS(TStrokes_processed{i,test_writers(j)},no_of_bins);       %HOG,test
     features11 = [features11,X];
     end
 end
 
-K=200; % size of dictionary 
+K=400; % size of dictionary 
 
-lambda=.5;
+lambda=0.2;
 iter = 250;
 modeParam = 0;
  mode=0; % this value is not used
@@ -110,8 +110,8 @@ L = 5;
 
  alpha_tr=abs(alpha1); alpha_te=abs(alpha2);
 
- ks=1;
- bc=10;
+ ks=0.00001;
+ bc=1;
 disp('SVM');
 [ AccuracyS,Accuracy3,Accuracy5,acc ] = svm4line(start_folder, end_folder,W1_4index,W5_8index,alpha_tr,alpha_te,ks,bc);
 
