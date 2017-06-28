@@ -110,7 +110,7 @@ L = 5;
 
  alpha_tr=abs(alpha1); alpha_te=abs(alpha2);
 
- ks=0.00001;
+ ks=1;
  bc=1;
 disp('SVM');
 [ AccuracyS,Accuracy3,Accuracy5,acc ] = svm4line(start_folder, end_folder,W1_4index,W5_8index,alpha_tr,alpha_te,ks,bc);
