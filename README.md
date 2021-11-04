@@ -1,6 +1,6 @@
 # writer-identification-hist-sparse
 This repository contains code for my paper titled "Online Writer Identification using Sparse Coding and Histogram based descriptors" published as an oral in the 15th International Conference on Frontiers in Handwriting Recognition (ICFHR-2016).
-Download a copy of the paper [here](https://drive.google.com/file/d/0BxhUwxvLPO7TOXY3MXpiUmc2Xzg/view). The paper is also available on IEEE Xplore [here](http://ieeexplore.ieee.org/abstract/document/7814126/).
+Download a copy of the paper [here](https://drive.google.com/file/d/0BxhUwxvLPO7TOXY3MXpiUmc2Xzg/view?usp=sharing&resourcekey=0-Icn_AhnHF45fOaOrQn4s4Q). The paper is also available on IEEE Xplore [here](http://ieeexplore.ieee.org/abstract/document/7814126/).
 
 If you use this work, please cite the paper:
 
